@@ -15,7 +15,7 @@ export default function Nav() {
 	};
 
 	return (
-		<header className="max-w-xl mx-auto mt-16 mb-8 md:max-w-2xl">
+		<header className="max-w-xl mx-auto mt-16 mb-8 md:max-w-3xl">
 			<nav className="flex justify-between items-center">
 				<img
 					src={logo}
@@ -25,7 +25,7 @@ export default function Nav() {
 				/>
 				<div className="flex gap-4">
 					<span className="font-bold uppercase ">
-						{colorTheme === 'light' ? 'light' : 'dark'}
+						{colorTheme === 'light' ? 'dark' : 'light'}
 					</span>
 					<DarkModeSwitch
 						checked={darkMode}
