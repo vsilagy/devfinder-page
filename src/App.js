@@ -4,7 +4,7 @@ import ResultsCard from './components/ResultsCard';
 
 export default function App() {
 	return (
-		<div className="mx-auto dark:bg-veryDarkBlue dark:text-white h-screen w-screen ">
+		<div className="max-w-screen max-h-screen mx-auto">
 			<Nav />
 			<SearchInput />
 			<ResultsCard />

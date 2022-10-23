@@ -1,30 +1,39 @@
-import { useEffect, useState } from 'react';
-import sun from '../assets/icon-sun.svg';
-import moon from '../assets/icon-moon.svg';
+import { useState } from 'react';
+import useDarkMode from '../hook/useDarkMode';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import logo from '../assets/logo.svg';
 
 export default function Nav() {
-	const [theme, setTheme] = useState('');
+	const [colorTheme, setTheme] = useDarkMode();
+	const [darkMode, setDarkMode] = useState(
+		colorTheme === 'light' ? true : false,
+	);
 
-	useEffect(() => {
-		if (theme === 'dark') {
-			window.document.documentElement.classList.add('dark');
-		} else {
-			window.document.documentElement.classList.remove('dark');
-		}
-	}, [theme]);
-
-	const handleThemeToggle = () => {
-		setTheme(theme === 'dark' ? 'light' : 'dark');
+	const toggleDarkMode = (checked) => {
+		setTheme(colorTheme);
+		setDarkMode(checked);
 	};
 
 	return (
-		<section className=" body-font dark:black">
-			<header className="flex justify-between container max-w-lg mx-auto">
-				<h1>devfinder</h1>
-				<button className="" onClick={handleThemeToggle}>
-					<img src={theme === 'light' ? moon : sun} />
-				</button>
-			</header>
-		</section>
+		<header className="max-w-xl mx-auto mt-16 mb-8 md:max-w-2xl">
+			<nav className="flex justify-between items-center">
+				<img
+					src={logo}
+					className={`${
+						colorTheme === 'dark' ? 'invert' : 'invert-0'
+					}`}
+				/>
+				<div className="flex gap-4">
+					<span className="font-bold uppercase ">
+						{colorTheme === 'light' ? 'light' : 'dark'}
+					</span>
+					<DarkModeSwitch
+						checked={darkMode}
+						onChange={toggleDarkMode}
+						size={24}
+					/>
+				</div>
+			</nav>
+		</header>
 	);
 }
