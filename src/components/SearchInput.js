@@ -8,7 +8,7 @@ export default function Input() {
 					placeholder="Search Github username"
 					className="w-full h-full outline-none placeholder:text-grayishBlue dark:bg-darkSaturatedBlue dark:placeholder:text-white"></input>
 			</div>
-			<button className="bg-blueish hover:opacity-70 font-bold h-14 mx-2 px-7 rounded-xl">
+			<button className="bg-blueish text-white hover:opacity-70 font-bold h-14 mx-2 px-7 rounded-xl">
 				Search
 			</button>
 		</section>

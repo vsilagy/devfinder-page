@@ -25,7 +25,7 @@ export default function Nav() {
 				/>
 				<div className="flex gap-4">
 					<span className="font-bold uppercase ">
-						{colorTheme === 'light' ? 'dark' : 'light'}
+						{colorTheme === 'dark' ? 'light' : 'dark'}
 					</span>
 					<DarkModeSwitch
 						checked={darkMode}
