@@ -41,7 +41,7 @@ export default function ResultsCard(props) {
 
 				<div className="grid grid-cols-1 gap-4 mx-2 text-sm md:grid-cols-2 md:gap-6 md:mx-4 md:text-base">
 					<div className="flex gap-4 items-center">
-						<img src={location} className="w-5 md:h-6" />
+						<img src={location} className="w-4 md:w-5" />
 						<p>
 							{!props.data.location
 								? 'Not available'
@@ -59,6 +59,7 @@ export default function ResultsCard(props) {
 					<div className="flex gap-4  items-center">
 						<img src={website} className="w-5 md:w-6" />
 						<p>
+							{' '}
 							{!props.data.blog ? 'Not available' : props.data.blog}
 						</p>
 					</div>
