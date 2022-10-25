@@ -11,7 +11,7 @@ export default function SearchUser({ setUser }) {
 	return (
 		<section className="max-w-xl mx-auto flex justify-between py-3 mb-6 rounded-xl shadow-lg bg-white dark:bg-darkSaturatedBlue md:max-w-3xl">
 			<form className="flex items-center w-full ">
-				<img src={search} className="px-4 h-6" />
+				<img src={search} className="px-4 h-6" alt="search icon" />
 				<input
 					placeholder="Search Github username"
 					className="w-full h-full outline-none placeholder:text-sm placeholder:text-grayishBlue dark:bg-darkSaturatedBlue dark:placeholder:text-white md:placeholder:text-base"

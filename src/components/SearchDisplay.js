@@ -12,6 +12,7 @@ export default function ResultsCard(props) {
 			<div className="flex justify-start gap-8 mb-8 p-2 md:p-4">
 				<img
 					src={props.data.avatar_url}
+					alt={`avatar picture of ${props.data.name}`}
 					className="h-28 w-28 rounded-full md:h-36 md:w-36"
 				/>
 				<div className="flex flex-col gap-4  md:flex-row md:justify-between md:flex-1">
