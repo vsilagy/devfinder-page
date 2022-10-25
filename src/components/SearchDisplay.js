@@ -9,7 +9,7 @@ export default function ResultsCard(props) {
 
 	return (
 		<section className="max-w-xl mx-auto mb-12 p-4 rounded-xl shadow-lg bg-white dark:bg-darkSaturatedBlue md:p-8 md:max-w-3xl">
-			<div className="flex justify-start gap-8 mb-8 p-2 md:p-4">
+			<div className="flex justify-start gap-8 mb-4 p-2 md:p-4 md:mb-8">
 				<img
 					src={props.data.avatar_url}
 					alt={`${props.data.name} avatar `}
