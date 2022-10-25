@@ -17,13 +17,9 @@ export default function Nav() {
 	return (
 		<header className="max-w-xl mx-auto mt-16 mb-8 md:max-w-3xl">
 			<nav className="flex justify-between items-center">
-				<img
-					src={logo}
-					alt="logo img"
-					className={`${
-						colorTheme === 'dark' ? 'invert' : 'invert-0'
-					}`}
-				/>
+				<h1 className="text-3xl font-bold dark:text-white">
+					devfinder
+				</h1>
 				<div className="flex gap-4">
 					<span className="font-bold uppercase ">
 						{colorTheme === 'dark' ? 'light' : 'dark'}

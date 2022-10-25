@@ -8,7 +8,7 @@ export default function ResultsCard(props) {
 	let date = Moment(props.data.created_at).format('D MMM YYYY');
 
 	return (
-		<section className="max-w-xl mx-auto p-4 rounded-xl shadow-lg bg-white dark:bg-darkSaturatedBlue md:p-8 md:max-w-3xl">
+		<section className="max-w-xl mx-auto mb-12 p-4 rounded-xl shadow-lg bg-white dark:bg-darkSaturatedBlue md:p-8 md:max-w-3xl">
 			<div className="flex justify-start gap-8 mb-8 p-2 md:p-4">
 				<img
 					src={props.data.avatar_url}
@@ -40,7 +40,7 @@ export default function ResultsCard(props) {
 					<p className="font-bold">{props.data.following}</p>
 				</div>
 
-				<div className="grid grid-cols-1 gap-4 mx-2 text-sm md:grid-cols-2 md:gap-6 md:mx-4 md:text-base">
+				<div className="grid grid-cols-1 gap-4 mx-2 text-sm md:grid-cols-2 md:gap-6 md:mx-4 md:mb-4 md:text-base">
 					<div className="flex gap-5 items-start">
 						<img src={location} className="h-5" alt="location icon" />
 						<p>

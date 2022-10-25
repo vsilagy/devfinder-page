@@ -19,7 +19,7 @@ export default function SearchUser({ setUser }) {
 					onChange={(e) => setText(e.target.value)}
 				/>
 				<button
-					className="bg-blueish text-white hover:opacity-70 font-bold h-14 mx-2 px-7 rounded-xl"
+					className="bg-blueish text-white font-bold h-14 mx-2 px-5 rounded-xl hover:opacity-70 md:px-7"
 					onClick={handleSubmit}>
 					Search
 				</button>
