@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import Nav from './components/Nav';
-import SearchInput from './components/SearchInput';
-import ResultsCard from './components/ResultsCard';
+import SearchUser from './components/SearchUser';
+import SearchDisplay from './components/SearchDisplay';
 
 export default function App() {
 	let API = 'https://api.github.com/users/octocat';
-	const [text, setText] = useState('');
 	const [user, setUser] = useState('');
 	const [data, setData] = useState('');
 
@@ -25,8 +24,8 @@ export default function App() {
 	return (
 		<div className="max-w-screen max-h-screen mx-auto px-4">
 			<Nav />
-			<SearchInput />
-			<ResultsCard data={data} />
+			<SearchUser setUser={setUser} />
+			<SearchDisplay data={data} />
 		</div>
 	);
 }
