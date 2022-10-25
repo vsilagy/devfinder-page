@@ -8,16 +8,16 @@ export default function App() {
 	const [data, setData] = useState('');
 
 	useEffect(() => {
+		const fetchUser = async () => {
+			const response = await fetch(
+				`https://api.github.com/users/${user}`,
+			);
+			const data = await response.json();
+			setData(data);
+		};
+
 		fetchUser();
 	}, [user]);
-
-	const fetchUser = async () => {
-		const response = await fetch(
-			`https://api.github.com/users/${user}`,
-		);
-		const data = await response.json();
-		setData(data);
-	};
 
 	return (
 		<div className="max-w-screen mx-auto px-4">
