@@ -4,11 +4,11 @@ import SearchUser from './components/SearchUser';
 import SearchDisplay from './components/SearchDisplay';
 
 export default function App() {
-	const [user, setUser] = useState('');
+	const [user, setUser] = useState('octocat');
 	const [data, setData] = useState('');
 
 	useEffect(() => {
-		!user ? setUser('octocat') : fetchUser();
+		fetchUser();
 	}, [user]);
 
 	const fetchUser = async () => {

@@ -19,6 +19,7 @@ export default function Nav() {
 			<nav className="flex justify-between items-center">
 				<img
 					src={logo}
+					alt="logo img"
 					className={`${
 						colorTheme === 'dark' ? 'invert' : 'invert-0'
 					}`}

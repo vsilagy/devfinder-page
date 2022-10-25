@@ -14,7 +14,7 @@ export default function SearchUser({ setUser }) {
 				<img src={search} className="px-4 h-6" />
 				<input
 					placeholder="Search Github username"
-					className="w-full h-full outline-none placeholder:text-grayishBlue dark:bg-darkSaturatedBlue dark:placeholder:text-white"
+					className="w-full h-full outline-none placeholder:text-sm placeholder:text-grayishBlue dark:bg-darkSaturatedBlue dark:placeholder:text-white md:placeholder:text-base"
 					value={text}
 					onChange={(e) => setText(e.target.value)}
 				/>

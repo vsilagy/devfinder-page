@@ -3,7 +3,7 @@ import location from '../assets/icon-location.svg';
 import twitter from '../assets/icon-twitter.svg';
 import website from '../assets/icon-website.svg';
 import company from '../assets/icon-company.svg';
-import { fromJSON } from 'postcss';
+
 export default function ResultsCard(props) {
 	let date = Moment(props.data.created_at).format('D MMM YYYY');
 
@@ -12,7 +12,7 @@ export default function ResultsCard(props) {
 			<div className="flex justify-start gap-8 mb-8 p-2 md:p-4">
 				<img
 					src={props.data.avatar_url}
-					className="h-24 w-24 rounded-full md:h-36 md:w-36"
+					className="h-28 w-28 rounded-full md:h-36 md:w-36"
 				/>
 				<div className="flex flex-col gap-4  md:flex-row md:justify-between md:flex-1">
 					<div>
@@ -40,31 +40,30 @@ export default function ResultsCard(props) {
 				</div>
 
 				<div className="grid grid-cols-1 gap-4 mx-2 text-sm md:grid-cols-2 md:gap-6 md:mx-4 md:text-base">
-					<div className="flex gap-4 items-center">
-						<img src={location} className="w-4 md:w-5" />
+					<div className="flex gap-5 items-start">
+						<img src={location} className="h-5" alt="location icon" />
 						<p>
 							{!props.data.location
 								? 'Not available'
 								: props.data.location}
 						</p>
 					</div>
-					<div className="flex gap-4 items-center">
-						<img src={twitter} className="w-5 md:w-6" />
+					<div className="flex gap-3 items-start">
+						<img src={twitter} className="h-5" alt="twitter icon" />
 						<p>
 							{!props.data.twitter_username
 								? 'Not available'
 								: props.data.twitter_username}
 						</p>
 					</div>
-					<div className="flex gap-4  items-center">
-						<img src={website} className="w-5 md:w-6" />
+					<div className="flex gap-4 items-start">
+						<img src={website} className="h-5" alt="website icon" />
 						<p>
-							{' '}
 							{!props.data.blog ? 'Not available' : props.data.blog}
 						</p>
 					</div>
-					<div className="flex gap-4  items-center">
-						<img src={company} className="w-5 md:w-6" />
+					<div className="flex gap-4 items-start">
+						<img src={company} className="h-5" alt="company icon" />
 						<p>
 							{!props.data.company
 								? 'Not available'
