@@ -13,7 +13,7 @@ export default function ResultsCard({ data, error }) {
 			{error ? (
 				<div className="flex flex-col gap-10 items-center justify-between">
 					<h1 className="text-sm px-2 font-bold text-red-500 md:text-lg ">
-						These isn't the user you're looking for.
+						This isn't the user you're looking for.
 					</h1>
 					<img
 						src={octocat}
